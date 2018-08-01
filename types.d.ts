@@ -19,8 +19,8 @@ declare module 'joi' {
   };
   export type LanguageDescriptor = Partial<Record<Types, ErrorTypeDescriptor>> & {
     root: string;
-    key?: string;
-    messages?: { wrapArrays?: boolean; };
+    key: string;
+    messages: { wrapArrays: boolean; };
     [key: string]: ErrorTypeDescriptor
   };
 }
