@@ -7,9 +7,9 @@ declare module 'joi' {
      */
     locale?: string;
   }
-  export function addLocaleData(locale: string, language: LanguageDescriptor);
+  export function addLocaleData(locale: string, language: LanguageDescriptor): void;
   export function getLocaleData(locale?: string): LanguageDescriptor;
-  export function setDefaultLocale(locale: string);
+  export function setDefaultLocale(locale: string): void;
   export function getDefaultLocale(): string;
   export function formatErrorDetails(error: ValidationError, locale?: string): ValidationError;
 
@@ -18,7 +18,7 @@ declare module 'joi' {
     [key: string]: ErrorTypeDescriptor;
   };
   export type LanguageDescriptor = Partial<Record<Types, ErrorTypeDescriptor>> & {
-    root?: string;
+    root: string;
     key?: string;
     messages?: { wrapArrays?: boolean; };
     [key: string]: ErrorTypeDescriptor
