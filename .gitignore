@@ -19,4 +19,4 @@ node_modules/
 *.tgz
 
 # Distribution outputs
-dist/
+# dist/
